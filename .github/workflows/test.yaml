@@ -10,6 +10,7 @@ jobs:
 
   coverage:
     name: Update coverage
+    runs-on: ubuntu-latest
     steps:
 
       - name: Update coverage badge
