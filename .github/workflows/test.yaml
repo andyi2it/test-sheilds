@@ -1,0 +1,22 @@
+name: Coverage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: []
+
+jobs:
+
+  coverage:
+    name: Update coverage
+
+    - name: Update coverage badge
+      uses: schneegans/dynamic-badges-action@v1.4.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 4c1ab212c1422a263ec889379dbd3540
+        filename: test-coverage.json
+        label: coverage
+        message: 12
+        color: green
